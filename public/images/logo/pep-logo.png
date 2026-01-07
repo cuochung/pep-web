@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <rect fill="#4a7c59" width="200" height="60" rx="5"/>
+  <text fill="#ffffff" font-family="Arial, sans-serif" font-size="32" font-weight="bold" x="100" y="42" text-anchor="middle">PEP</text>
+</svg>
+
