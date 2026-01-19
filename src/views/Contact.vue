@@ -73,14 +73,6 @@
             </div>
           </div>
 
-          <!-- 聯絡表單 -->
-          <div class="contact-form-wrapper scroll-reveal">
-            <h2>線上留言</h2>
-            <p class="form-description">
-              請填寫以下表單，我們會盡快與您聯繫
-            </p>
-            <ContactForm />
-          </div>
         </div>
       </div>
     </section>
@@ -88,7 +80,6 @@
 </template>
 
 <script setup>
-import ContactForm from '../components/forms/ContactForm.vue'
 import { COMPANY_INFO, SOCIAL_LINKS } from '../utils/constants'
 </script>
 
@@ -116,18 +107,13 @@ import { COMPANY_INFO, SOCIAL_LINKS } from '../utils/constants'
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr;
   gap: var(--spacing-3xl);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.contact-info h2,
-.contact-form-wrapper h2 {
+.contact-info h2 {
   color: var(--color-primary);
   margin-bottom: var(--spacing-xl);
 }
@@ -211,20 +197,9 @@ import { COMPANY_INFO, SOCIAL_LINKS } from '../utils/constants'
 }
 
 .social-link img {
-  width: 24px;
-  height: 24px;
-}
-
-.contact-form-wrapper {
-  background-color: var(--color-white);
-  padding: var(--spacing-2xl);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-md);
-}
-
-.form-description {
-  color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-xl);
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
 }
 </style>
 

@@ -13,56 +13,174 @@ export const COMPANY_INFO = {
 export const PRODUCTS = [
   {
     id: 'product-010',
-    name: '超韌性透明膜0.10mm',
+    name: 'UV2892AD-S/0.10mm超透膜',
     thickness: '0.10mm',
-    description: '適用於各種農業溫室，提供優異的透光性與耐用性',
+    description: '升級版的UV2892AD-S，採用新世代的母料，能延緩透光率逐年衰退的速率，使農膜更透明；並增強UV穩定劑的一般保護能力，可進一步降低老化破損的失敗率，使農膜發揮最佳效能。',
     features: [
-      '高透光率',
-      '超強韌性',
-      '抗UV',
-      '長效使用'
+      '採用新世代母料',
+      '延緩透光率逐年衰退',
+      '增強UV穩定劑保護能力',
+      '降低老化破損失敗率',
+      '發揮最佳效能'
+    ],
+    specifications: [
+      {
+        category: '厚度規格',
+        items: [
+          { name: '厚度', nameEn: 'Thickness', value: '100', unit: 'mic', method: '' },
+          { name: '平均厚度公差', nameEn: '', value: '±5%', unit: '', method: '' },
+          { name: '任一點厚度公差', nameEn: '', value: '±10%', unit: '', method: '' }
+        ]
+      },
+      {
+        category: '機械性能',
+        items: [
+          { name: '抗拉力強度-縱向', nameEn: 'Tensile strength MD', value: '32', unit: 'N/mm²', method: 'ASTM D882' },
+          { name: '抗拉力強度-橫向', nameEn: 'Tensile strength TD', value: '32', unit: 'N/mm²', method: 'ASTM D882' },
+          { name: '伸長率-縱向', nameEn: 'Elongation MD', value: '600', unit: '%', method: 'ASTM D882' },
+          { name: '伸長率-橫向', nameEn: 'Elongation TD', value: '650', unit: '%', method: 'ASTM D882' },
+          { name: '抗撕裂強度', nameEn: 'Tear Resistance', value: '6', unit: 'gf/mic', method: 'ASTM D1922' },
+          { name: '耐衝擊強度', nameEn: 'Dart Drop', value: '750', unit: 'gr', method: 'ASTM D1709' }
+        ]
+      },
+      {
+        category: '光學性能',
+        items: [
+          { name: '透光率', nameEn: 'Global Light Transmission', value: '≥90', unit: '%', method: 'ASTM D1003' },
+          { name: '折射率', nameEn: 'Diffusion', value: '≤15', unit: '%', method: 'ASTM D1003' },
+          { name: 'UV透過率(300~390nm)', nameEn: 'UV Transmission', value: '10~30', unit: '%', method: '' }
+        ]
+      },
+      {
+        category: '使用壽命',
+        items: [
+          { name: '耐用年限', nameEn: 'Lifetime', value: '2', unit: '年', method: '' }
+        ]
+      }
     ],
     image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     slug: 'product-0.10mm'
   },
   {
     id: 'product-015',
-    name: '超韌性透明膜0.15mm',
+    name: 'UV2892AD-S/0.15mm超透膜',
     thickness: '0.15mm',
-    description: '加厚設計，提供更強的保護與更長的使用壽命',
+    description: '升級版的UV2892AD-S，採用新世代的母料，能延緩透光率逐年衰退的速率，使農膜更透明；並增強UV穩定劑的一般保護能力，可進一步降低老化破損的失敗率，使農膜發揮最佳效能。',
     features: [
-      '加厚設計',
-      '超強韌性',
-      '抗UV',
-      '耐候性佳'
+      '採用新世代母料',
+      '延緩透光率逐年衰退',
+      '增強UV穩定劑保護能力',
+      '降低老化破損失敗率',
+      '市場主力規格',
+      '發揮最佳效能'
+    ],
+    specialNote: '0.15mm的厚度是目前市場上的主力規格，更是業界抄襲、仿冒的目標。',
+    specifications: [
+      {
+        category: '厚度規格',
+        items: [
+          { name: '厚度', nameEn: 'Thickness', value: '150', unit: 'mic', method: '' },
+          { name: '平均厚度公差', nameEn: '', value: '±5%', unit: '', method: '' },
+          { name: '任一點厚度公差', nameEn: '', value: '±10%', unit: '', method: '' }
+        ]
+      },
+      {
+        category: '機械性能',
+        items: [
+          { name: '抗拉力強度-縱向', nameEn: 'Tensile strength MD', value: '32', unit: 'N/mm²', method: 'ASTM D882' },
+          { name: '抗拉力強度-橫向', nameEn: 'Tensile strength TD', value: '32', unit: 'N/mm²', method: 'ASTM D882' },
+          { name: '伸長率-縱向', nameEn: 'Elongation MD', value: '600', unit: '%', method: 'ASTM D882' },
+          { name: '伸長率-橫向', nameEn: 'Elongation TD', value: '650', unit: '%', method: 'ASTM D882' },
+          { name: '抗撕裂強度', nameEn: 'Tear Resistance', value: '6', unit: 'gf/mic', method: 'ASTM D1922' },
+          { name: '耐衝擊強度', nameEn: 'Dart Drop', value: '750', unit: 'gr', method: 'ASTM D1709' }
+        ]
+      },
+      {
+        category: '光學性能',
+        items: [
+          { name: '透光率', nameEn: 'Global Light Transmission', value: '≥90', unit: '%', method: 'ASTM D1003' },
+          { name: '折射率', nameEn: 'Diffusion', value: '≤15', unit: '%', method: 'ASTM D1003' },
+          { name: 'UV透過率(300~390nm)', nameEn: 'UV Transmission', value: '10~30', unit: '%', method: '' }
+        ]
+      },
+      {
+        category: '使用壽命',
+        items: [
+          { name: '耐用年限', nameEn: 'Lifetime', value: '2', unit: '年', method: '' }
+        ]
+      }
     ],
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     slug: 'product-0.15mm'
   },
   {
     id: 'product-020',
-    name: '超韌性透明膜0.20mm',
+    name: 'UV2992AD-S/0.20mm超透膜',
     thickness: '0.20mm',
-    description: '最厚規格，適合需要最高強度保護的應用',
+    description: 'UV2992AD-S 外層添加了比UV2892AD-S更多的紫外線吸收劑與紫外線安定劑，以控制並延長膠膜的使用壽命，可長時間使用減少更換的次數，相對減少農膜更換的勞力及成本，達到降低整體成本的目標。',
     features: [
-      '最高強度',
-      '超強韌性',
-      '抗UV',
-      '超長壽命'
+      '添加更多紫外線吸收劑',
+      '添加更多紫外線安定劑',
+      '延長使用壽命',
+      '減少更換次數',
+      '降低勞力成本',
+      '降低整體成本'
+    ],
+    specialNote: '0.2mm的厚度使用年限更可靠穩定，更能承受物理性的破壞，老化破損率低，值得推薦。',
+    specifications: [
+      {
+        category: '厚度規格',
+        items: [
+          { name: '厚度', nameEn: 'Thickness', value: '200', unit: 'mic', method: '' },
+          { name: '平均厚度公差', nameEn: '', value: '±5%', unit: '', method: '' },
+          { name: '任一點厚度公差', nameEn: '', value: '±10%', unit: '', method: '' }
+        ]
+      },
+      {
+        category: '機械性能',
+        items: [
+          { name: '抗拉力強度-縱向', nameEn: 'Tensile strength MD', value: '32', unit: 'N/mm²', method: 'ASTM D882' },
+          { name: '抗拉力強度-橫向', nameEn: 'Tensile strength TD', value: '32', unit: 'N/mm²', method: 'ASTM D882' },
+          { name: '伸長率-縱向', nameEn: 'Elongation MD', value: '600', unit: '%', method: 'ASTM D882' },
+          { name: '伸長率-橫向', nameEn: 'Elongation TD', value: '650', unit: '%', method: 'ASTM D882' },
+          { name: '抗撕裂強度', nameEn: 'Tear Resistance', value: '6', unit: 'gf/mic', method: 'ASTM D1922' },
+          { name: '耐衝擊強度', nameEn: 'Dart Drop', value: '750', unit: 'gr', method: 'ASTM D1709' }
+        ]
+      },
+      {
+        category: '光學性能',
+        items: [
+          { name: '透光率', nameEn: 'Global Light Transmission', value: '≥90', unit: '%', method: 'ASTM D1003' },
+          { name: '折射率', nameEn: 'Diffusion', value: '≤15', unit: '%', method: 'ASTM D1003' },
+          { name: 'UV透過率(300~390nm)', nameEn: 'UV Transmission', value: '10~30', unit: '%', method: '' }
+        ]
+      },
+      {
+        category: '使用壽命',
+        items: [
+          { name: '耐用年限', nameEn: 'Lifetime', value: '2', unit: '年', method: '' }
+        ]
+      }
     ],
     image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     slug: 'product-0.20mm'
   },
   {
     id: 'product-waterproof',
-    name: '軟質不透水布',
+    name: 'BL6050 軟質不透水布',
     thickness: '多種規格',
-    description: '防水性能優異，適用於各種防水需求',
+    description: 'LDPE/EVA/LLDPE此配方所形成的物性，仍保有良好的機械強度，但比HDPE更有彈性及柔軟度，比較容易施工，適用於灌溉用之蓄水池、灌溉水道之裡襯、水產養殖之內襯等。',
     features: [
-      '完全防水',
-      '柔軟耐用',
-      '多種規格',
-      '應用廣泛'
+      '良好的機械強度',
+      '比HDPE更有彈性',
+      '柔軟度佳',
+      '容易施工',
+      '適用範圍廣泛'
+    ],
+    applications: [
+      '灌溉用蓄水池',
+      '灌溉水道裡襯',
+      '水產養殖內襯'
     ],
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     slug: 'product-waterproof'
@@ -153,9 +271,9 @@ export const NAVIGATION = [
     name: '產品系列',
     path: '/products',
     children: [
-      { name: '超韌性透明膜0.10mm', path: '/products/product-0.10mm' },
-      { name: '超韌性透明膜0.15mm', path: '/products/product-0.15mm' },
-      { name: '超韌性透明膜0.20mm', path: '/products/product-0.20mm' },
+      { name: 'UV2892AD-S/0.10mm超透膜', path: '/products/product-0.10mm' },
+      { name: 'UV2892AD-S/0.15mm超透膜', path: '/products/product-0.15mm' },
+      { name: 'UV2992AD-S/0.20mm超透膜', path: '/products/product-0.20mm' },
       { name: '軟質不透水布', path: '/products/product-waterproof' }
     ]
   },

@@ -4,7 +4,7 @@
       <div class="intro-grid">
         <div class="intro-image scroll-reveal">
           <img 
-            src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            src="/images/factory/plastika-kritis.jpg" 
             alt="Plastika Kritis工廠" 
             class="hover-lift"
           />

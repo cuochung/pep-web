@@ -24,6 +24,21 @@
               </ul>
             </div>
 
+            <div v-if="product.specialNote" class="product-special-note">
+              <h3>特性</h3>
+              <p>{{ product.specialNote }}</p>
+            </div>
+
+            <div v-if="product.applications" class="product-applications">
+              <h3>適用範圍</h3>
+              <ul>
+                <li v-for="(app, index) in product.applications" :key="index">
+                  <span class="app-icon">▪</span>
+                  {{ app }}
+                </li>
+              </ul>
+            </div>
+
             <div class="product-actions">
               <router-link to="/contact" class="btn btn-primary">
                 立即詢問
@@ -31,6 +46,40 @@
               <router-link to="/products" class="btn btn-secondary">
                 返回產品列表
               </router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 產品規格 -->
+    <section v-if="product.specifications" class="product-specs-section section">
+      <div class="container">
+        <h2 class="section-title text-center scroll-reveal">產品規格</h2>
+        <div class="specs-wrapper scroll-reveal">
+          <div 
+            v-for="(specGroup, index) in product.specifications" 
+            :key="index"
+            class="spec-group"
+          >
+            <h3 class="spec-category">{{ specGroup.category }}</h3>
+            <div class="spec-table">
+              <div class="spec-row spec-header">
+                <div class="spec-cell">物性</div>
+                <div class="spec-cell">Property</div>
+                <div class="spec-cell">數值</div>
+                <div class="spec-cell">測試方法</div>
+              </div>
+              <div 
+                v-for="(item, itemIndex) in specGroup.items" 
+                :key="itemIndex"
+                class="spec-row"
+              >
+                <div class="spec-cell">{{ item.name }}</div>
+                <div class="spec-cell spec-en">{{ item.nameEn }}</div>
+                <div class="spec-cell spec-value">{{ item.value }}{{ item.unit }}</div>
+                <div class="spec-cell spec-method">{{ item.method }}</div>
+              </div>
             </div>
           </div>
         </div>
@@ -199,6 +248,64 @@ const relatedProducts = computed(() => {
   font-size: var(--font-size-xl);
 }
 
+.product-special-note {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(139, 195, 74, 0.1));
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-primary);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.product-special-note h3 {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.product-special-note p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.product-applications {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.product-applications h3 {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.product-applications ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.product-applications li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.app-icon {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
 .product-actions {
   display: flex;
   gap: var(--spacing-md);
@@ -238,8 +345,121 @@ const relatedProducts = computed(() => {
   transform: translateY(-2px);
 }
 
-.product-gallery-section {
+.product-specs-section {
   background-color: var(--color-white);
+}
+
+.specs-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.spec-group {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.spec-group:last-child {
+  margin-bottom: 0;
+}
+
+.spec-category {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.spec-table {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+}
+
+.spec-header .spec-cell {
+  color: var(--color-white);
+}
+
+.spec-cell {
+  padding: var(--spacing-md) var(--spacing-lg);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--color-border);
+}
+
+.spec-cell:last-child {
+  border-right: none;
+}
+
+.spec-en {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.spec-value {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  justify-content: center;
+}
+
+.spec-method {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .spec-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .spec-cell {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .spec-cell:last-child {
+    border-bottom: none;
+  }
+  
+  .spec-row {
+    border-bottom: 2px solid var(--color-border);
+  }
+  
+  .spec-header {
+    display: none;
+  }
+  
+  .spec-cell::before {
+    content: attr(data-label);
+    font-weight: var(--font-weight-semibold);
+    margin-right: var(--spacing-sm);
+  }
+}
+
+.product-gallery-section {
+  background-color: var(--color-bg-secondary);
 }
 
 .related-products {

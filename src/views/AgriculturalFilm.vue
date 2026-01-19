@@ -3,24 +3,11 @@
     <section class="page-hero">
       <div class="container">
         <h1 class="page-title scroll-reveal">認識農膜</h1>
-        <p class="page-subtitle scroll-reveal">
-          了解農膜的特性與應用
-        </p>
       </div>
     </section>
 
     <section class="intro-section section">
       <div class="container">
-        <div class="intro-content scroll-reveal">
-          <h2>什麼是農膜？</h2>
-          <p>
-            農膜（Agricultural Film）是一種專門用於農業生產的塑膠薄膜，主要應用於溫室、大棚等農業設施中。優質的農膜能夠有效調節光照、溫度、濕度等環境因素，為作物創造最適宜的生長環境。
-          </p>
-          <p>
-            PEP利得膜®採用先進的三層共擠技術，結合多年的研發經驗，為農業生產提供高品質的農膜產品。
-          </p>
-        </div>
-
         <div class="topics-grid">
           <router-link 
             to="/agricultural-film/light-impact" 
@@ -98,6 +85,128 @@
         </div>
       </div>
     </section>
+
+    <section class="features-showcase section">
+      <div class="container">
+        <h2 class="section-title text-center scroll-reveal">
+          農膜原來可以這樣<span class="title-dots">......</span>
+        </h2>
+        
+        <div class="features-grid">
+          <!-- 保溫功能 -->
+          <div class="feature-item scroll-reveal">
+            <h3 class="feature-title">保溫功能</h3>
+            <div class="feature-images">
+              <div class="feature-image-placeholder">
+                <div class="image-icon">☀️</div>
+                <span class="image-label">日間</span>
+              </div>
+              <div class="feature-image-placeholder">
+                <div class="image-icon">🌙</div>
+                <span class="image-label">夜間</span>
+              </div>
+            </div>
+            <p class="feature-description">有效阻隔遠紅外線，白天蓄熱，夜間保溫，減少溫差</p>
+          </div>
+
+          <!-- 防滴功能 -->
+          <div class="feature-item scroll-reveal">
+            <h3 class="feature-title">防滴功能</h3>
+            <div class="feature-images">
+              <div class="feature-image-placeholder">
+                <div class="image-icon">💧</div>
+                <span class="image-label">無防滴</span>
+              </div>
+              <div class="feature-image-placeholder">
+                <div class="image-icon">✨</div>
+                <span class="image-label">有防滴</span>
+              </div>
+            </div>
+            <p class="feature-description">防止水滴凝結，使水分以薄膜流下，提升透光率</p>
+          </div>
+
+          <!-- 消霧功能 -->
+          <div class="feature-item scroll-reveal">
+            <h3 class="feature-title">消霧功能</h3>
+            <div class="feature-images">
+              <div class="feature-image-placeholder">
+                <div class="image-icon">🌫️</div>
+                <span class="image-label">起霧</span>
+              </div>
+              <div class="feature-image-placeholder">
+                <div class="image-icon">☀️</div>
+                <span class="image-label">清晰</span>
+              </div>
+            </div>
+            <p class="feature-description">消除霧氣，保持膜面清晰，確保光線充分透過</p>
+          </div>
+
+          <!-- 高折射功能 -->
+          <div class="feature-item scroll-reveal">
+            <h3 class="feature-title">高折射功能</h3>
+            <div class="feature-images">
+              <div class="feature-image-placeholder">
+                <div class="image-icon">🔆</div>
+                <span class="image-label">直射光</span>
+              </div>
+              <div class="feature-image-placeholder">
+                <div class="image-icon">✨</div>
+                <span class="image-label">散射光</span>
+              </div>
+            </div>
+            <p class="feature-description">將直射光轉為散射光，光線均勻分佈，防止灼傷</p>
+          </div>
+
+          <!-- 降溫功能（夏季） -->
+          <div class="feature-item scroll-reveal">
+            <h3 class="feature-title">降溫功能（夏季）</h3>
+            <div class="feature-images">
+              <div class="feature-image-placeholder">
+                <div class="image-icon">🔥</div>
+                <span class="image-label">高溫</span>
+              </div>
+              <div class="feature-image-placeholder">
+                <div class="image-icon">❄️</div>
+                <span class="image-label">降溫</span>
+              </div>
+            </div>
+            <p class="feature-description">微氣泡層設計，反射部分熱能，降低溫室溫度</p>
+          </div>
+
+          <!-- 玫瑰專用膜 -->
+          <div class="feature-item scroll-reveal">
+            <h3 class="feature-title">玫瑰專用膜</h3>
+            <div class="feature-images">
+              <div class="feature-image-placeholder">
+                <div class="image-icon">🥀</div>
+                <span class="image-label">一般膜</span>
+              </div>
+              <div class="feature-image-placeholder">
+                <div class="image-icon">🌹</div>
+                <span class="image-label">專用膜</span>
+              </div>
+            </div>
+            <p class="feature-description">特殊光譜設計，適合玫瑰生長，提升花色與品質</p>
+          </div>
+
+          <!-- 生物防治功能 -->
+          <div class="feature-item scroll-reveal">
+            <h3 class="feature-title">生物防治功能</h3>
+            <div class="feature-images">
+              <div class="feature-image-placeholder">
+                <div class="image-icon">🐛</div>
+                <span class="image-label">有害蟲</span>
+              </div>
+              <div class="feature-image-placeholder">
+                <div class="image-icon">🦟</div>
+                <span class="image-label">防治後</span>
+              </div>
+            </div>
+            <p class="feature-description">阻隔特定波長，抑制害蟲活動，減少農藥使用</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -126,22 +235,8 @@
   margin: 0;
 }
 
-.intro-content {
-  max-width: 800px;
-  margin: 0 auto var(--spacing-3xl);
-  text-align: center;
-}
-
-.intro-content h2 {
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-xl);
-}
-
-.intro-content p {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-relaxed);
-  margin-bottom: var(--spacing-lg);
+.intro-section {
+  padding: var(--spacing-4xl) 0;
 }
 
 .topics-grid {
@@ -266,6 +361,172 @@
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
   margin: 0;
+}
+
+/* 農膜功能展示區 */
+.features-showcase {
+  padding: var(--spacing-4xl) 0;
+  background: linear-gradient(180deg, #fffef0 0%, #fff9e6 100%);
+}
+
+.features-showcase .section-title {
+  font-size: var(--font-size-3xl);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-3xl);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title-dots {
+  color: var(--color-primary);
+  letter-spacing: 0.2em;
+}
+
+/* 功能網格布局 */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-3xl) var(--spacing-2xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+}
+
+/* 單個功能項 */
+.feature-item {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-base);
+  border: 2px solid transparent;
+}
+
+.feature-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-primary);
+}
+
+/* 功能標題 */
+.feature-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 3px solid var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 圖片容器 */
+.feature-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+/* 圖片占位符 */
+.feature-image-placeholder {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  border: 2px solid #90caf9;
+}
+
+.feature-item:hover .feature-image-placeholder {
+  transform: scale(1.05);
+  border-color: var(--color-primary);
+}
+
+.feature-image-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s;
+}
+
+.feature-item:hover .feature-image-placeholder::before {
+  left: 100%;
+}
+
+/* 圖片圖示 */
+.image-icon {
+  font-size: var(--font-size-4xl);
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+}
+
+/* 圖片標籤 */
+.image-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+}
+
+/* 功能描述 */
+.feature-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 var(--spacing-sm);
+}
+
+/* 平板裝置 */
+@media (max-width: 1024px) {
+  .features-grid {
+    max-width: 600px;
+    gap: var(--spacing-2xl);
+  }
+  
+  .feature-title {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* 手機裝置 */
+@media (max-width: 768px) {
+  .features-showcase .section-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .feature-item {
+    padding: var(--spacing-lg);
+  }
+  
+  .image-icon {
+    font-size: var(--font-size-3xl);
+  }
 }
 </style>
 
