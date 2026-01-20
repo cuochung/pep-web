@@ -4,179 +4,182 @@
       <div class="container">
         <h1 class="page-title scroll-reveal">農膜種類</h1>
         <p class="page-subtitle scroll-reveal">
-          認識不同類型的農膜特性與應用
+          光線.農膜.作物的相互關係
         </p>
       </div>
     </section>
 
     <section class="content-section section">
       <div class="container">
-        <div class="intro-text scroll-reveal">
-          <p>
-            農膜依據不同的功能需求和應用場景，可分為多種類型。每種農膜都有其獨特的特性和適用範圍，選擇合適的農膜對於提高作物產量和品質至關重要。
-          </p>
-        </div>
-
-        <div class="types-grid">
-          <div class="type-card scroll-reveal">
-            <div class="type-header">
-              <div class="type-icon">🌟</div>
-              <h3>透明膜</h3>
-            </div>
-            <div class="type-content">
-              <p class="type-description">
-                最常見的農膜類型，具有高透光率，適合大多數作物種植。
-              </p>
-              <h4>特點</h4>
-              <ul>
-                <li>透光率高達90%以上</li>
-                <li>價格經濟實惠</li>
-                <li>適用範圍廣</li>
-                <li>易於安裝使用</li>
-              </ul>
-              <h4>適用作物</h4>
-              <p>番茄、黃瓜、辣椒、茄子等大多數蔬菜作物</p>
-            </div>
+        <!-- 高折射農膜 -->
+        <div class="film-type-section scroll-reveal">
+          <div class="section-header">
+            <div class="header-icon">✨</div>
+            <h2>高折射農膜</h2>
           </div>
+          
+          <div class="section-content">
+            <p class="intro-paragraph">
+              光線對植物的成長雖有決定性的影響，農業上有一法則<strong>"增加1%的透光率，可增加1%的產量"</strong>但這只是指在光線不足的北歐地區。如果是在地中海或在日照充足的亞熱帶，熱帶地區，則正好相反。因為大量的輻射線，會導致大量的熱能累積在溫室內反而會妨礙植物的生長。
+            </p>
 
-          <div class="type-card scroll-reveal">
-            <div class="type-header">
-              <div class="type-icon">❄️</div>
-              <h3>保溫膜</h3>
-            </div>
-            <div class="type-content">
-              <p class="type-description">
-                具有優異的保溫性能，減少熱量散失，適合冬季種植。
+            <div class="info-card">
+              <h3>透光率的組成</h3>
+              <p>
+                當我們談到透光率時，我們必須很清楚的知道即<strong>總透光率是由折射光與直射光所組合而成的</strong>，就如同當天氣晴朗時，太陽光的照射大部份是直線的，如果天氣是陰天或有霧的，則太陽光經過這些微小的水滴後就變成折射光（散射光）。光線通過一種介質後，產生一角度，其角度大於4°時，稱之為折射光。
               </p>
-              <h4>特點</h4>
-              <ul>
-                <li>優異的保溫性能</li>
-                <li>減少溫差變化</li>
-                <li>節省加溫成本</li>
-                <li>延長生長季節</li>
-              </ul>
-              <h4>適用作物</h4>
-              <p>冬季蔬菜、花卉、育苗等需要保溫的作物</p>
             </div>
-          </div>
 
-          <div class="type-card scroll-reveal">
-            <div class="type-header">
-              <div class="type-icon">🌡️</div>
-              <h3>降溫膜</h3>
-            </div>
-            <div class="type-content">
-              <p class="type-description">
-                能夠反射部分陽光，降低溫室內溫度，適合夏季使用。
+            <div class="info-card">
+              <h3>高折射膜的原理</h3>
+              <p>
+                事實上同樣的原理，也被運用在農膜的生產技術上。太陽光穿過一種高透明度的農膜，不產生折射的現象，而形成直線光，如果是在上述的強日照地區，<strong>這種直射光會導致植物、花卉、果實的灼傷</strong>。
               </p>
-              <h4>特點</h4>
-              <ul>
-                <li>有效降低溫室溫度</li>
-                <li>減少強光傷害</li>
-                <li>降低降溫成本</li>
-                <li>改善作物生長環境</li>
-              </ul>
-              <h4>適用作物</h4>
-              <p>夏季蔬菜、花卉等不耐高溫的作物</p>
+              <p>
+                配方的改變可將這種直線光轉變為折射光，通常此種高折射膜的透光率會比一般的完全透明膜的總透光率少5%，但此項缺點可由折射光的優點來彌補，<strong>可均勻地照射在整個溫室內</strong>，即使在有遮陰的地方，葉子的重疊部份，均可接受到陽光，這種膜就稱之為高折射膜。
+              </p>
+              <p>
+                此種折射光的作用，對植物成長具有正面的作用，尤其是<strong>具有防止植物突長的積極作用</strong>。
+              </p>
             </div>
-          </div>
 
-          <div class="type-card scroll-reveal">
-            <div class="type-header">
-              <div class="type-icon">💧</div>
-              <h3>防霧滴膜</h3>
-            </div>
-            <div class="type-content">
-              <p class="type-description">
-                防止水滴凝結在膜面上，保持透光性，減少病害發生。
-              </p>
-              <h4>特點</h4>
-              <ul>
-                <li>防止霧滴形成</li>
-                <li>保持高透光率</li>
-                <li>減少病害發生</li>
-                <li>改善作物品質</li>
-              </ul>
-              <h4>適用作物</h4>
-              <p>葉菜類、草莓、花卉等易受水滴影響的作物</p>
-            </div>
-          </div>
-
-          <div class="type-card scroll-reveal">
-            <div class="type-header">
-              <div class="type-icon">🛡️</div>
-              <h3>防蟲網膜</h3>
-            </div>
-            <div class="type-content">
-              <p class="type-description">
-                結合農膜和防蟲網的功能，有效阻隔害蟲入侵。
-              </p>
-              <h4>特點</h4>
-              <ul>
-                <li>物理防蟲效果好</li>
-                <li>減少農藥使用</li>
-                <li>通風透氣性佳</li>
-                <li>環保安全</li>
-              </ul>
-              <h4>適用作物</h4>
-              <p>有機蔬菜、高價值作物等需要減少農藥使用的作物</p>
-            </div>
-          </div>
-
-          <div class="type-card scroll-reveal">
-            <div class="type-header">
-              <div class="type-icon">🌈</div>
-              <h3>多功能膜</h3>
-            </div>
-            <div class="type-content">
-              <p class="type-description">
-                結合多種功能於一體，如保溫、防霧滴、抗老化等。
-              </p>
-              <h4>特點</h4>
-              <ul>
-                <li>多功能整合</li>
-                <li>性能全面優異</li>
-                <li>使用壽命長</li>
-                <li>經濟效益高</li>
-              </ul>
-              <h4>適用作物</h4>
-              <p>各類高價值作物、精緻農業等</p>
+            <div class="highlight-card">
+              <div class="highlight-title">散射光分類標準</div>
+              <div class="classification-grid">
+                <div class="classification-item low">
+                  <div class="percentage">少於 25%</div>
+                  <div class="label">無折射膜</div>
+                </div>
+                <div class="classification-item medium">
+                  <div class="percentage">25~40%</div>
+                  <div class="label">中折射膜</div>
+                </div>
+                <div class="classification-item high">
+                  <div class="percentage">40~70%</div>
+                  <div class="label">高折射膜</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="selection-guide scroll-reveal">
-          <h2>如何選擇適合的農膜？</h2>
-          <div class="guide-grid">
-            <div class="guide-item">
-              <div class="guide-number">1</div>
-              <div class="guide-content">
-                <h3>考慮作物需求</h3>
-                <p>不同作物對光照、溫度、濕度的需求不同</p>
+        <!-- 保溫性農膜 -->
+        <div class="film-type-section scroll-reveal">
+          <div class="section-header">
+            <div class="header-icon">🔥</div>
+            <h2>保溫性農膜</h2>
+          </div>
+          
+          <div class="section-content">
+            <p class="intro-paragraph">
+              上面所提到的，單純的PE無法吸收長波段的<strong>FIR-遠紅外線</strong>，因此無保溫的效果。如果要達到保溫的效果，必須添加<strong>石粉（CaCO₃）填加劑或EVA</strong>，目地是要能吸收波長超過3000nm以上的遠紅外線。
+            </p>
+
+            <div class="comparison-box">
+              <div class="comparison-item">
+                <h4>添加 CaCO₃（碳酸鈣）</h4>
+                <ul>
+                  <li>具有很好的保溫功能</li>
+                  <li>藉由降低遠紅外線的穿透率以達到保溫效果</li>
+                  <li>通常穿透率低於30%時，就視為具有保溫效果</li>
+                  <li><span class="note-text">⚠️ 會使膜的透光率降低</span></li>
+                </ul>
+                <div class="tip-box">
+                  一個很有趣的現象是在寒冷的冬天，萬里晴空時，一到晚上FIR的消失特別快（即氣溫驟降）。
+                </div>
+              </div>
+
+              <div class="comparison-item">
+                <h4>添加 EVA</h4>
+                <ul>
+                  <li>在純PE的配方中加入一定比例的EVA</li>
+                  <li>比例越高，保溫的效果越好</li>
+                  <li><span class="highlight-text">✓ 不會影響原有的透光率</span></li>
+                  <li>需要使用多層共擠壓式的吹塑機</li>
+                </ul>
+                <div class="tip-box">
+                  一般的作法是在中間層以高含量的EVA配合EVA含量較少的外層，如此可大量的提高EVA的總含量比率，可有效的提高產品的保溫效果，又可避免產品發生品質上的問題。
+                </div>
               </div>
             </div>
 
-            <div class="guide-item">
-              <div class="guide-number">2</div>
-              <div class="guide-content">
-                <h3>評估氣候條件</h3>
-                <p>根據當地氣候特點選擇合適的農膜類型</p>
+            <div class="key-point-box">
+              <div class="icon">📊</div>
+              <div class="content">
+                <p class="main-text">
+                  一般好的保溫膜，可維持<strong>75~85%的遠紅外線</strong>，而無保溫膜只能維持<strong>40~50%</strong>。
+                </p>
+                <p class="sub-text">
+                  諸多試驗證明，好的保溫膜的使用，<strong class="benefit">可增加農民20~30%的收入</strong>。
+                </p>
               </div>
             </div>
 
-            <div class="guide-item">
-              <div class="guide-number">3</div>
-              <div class="guide-content">
-                <h3>考慮使用期限</h3>
-                <p>根據種植週期選擇適當厚度和耐用性的農膜</p>
+            <div class="formula-note">
+              保溫效果 = FIR 遠紅外線消失的%，也就是遠紅外線消失的比例越低保溫的效果越好
+            </div>
+          </div>
+        </div>
+
+        <!-- 防流滴的農膜 -->
+        <div class="film-type-section scroll-reveal">
+          <div class="section-header">
+            <div class="header-icon">💧</div>
+            <h2>防流滴的農膜</h2>
+          </div>
+          
+          <div class="section-content">
+            <p class="intro-paragraph">
+              由於溫室內、外相對溫度及濕度的差異，內部很容易因水份的蒸發而產生水滴，凝結在農膜內側，<strong>這些水滴將降低農膜的透光率15%甚至更高</strong>。可藉由添加一種介面活性劑，讓水滴形成一層薄薄水層順著兩側流下，就像在農膜上塗上一層肥皂的作用一樣，而達到防滴的效果。
+            </p>
+
+            <div class="quality-comparison">
+              <div class="quality-item premium">
+                <h4>優質防滴膜</h4>
+                <div class="feature-list">
+                  <div class="feature">
+                    <span class="icon">✓</span>
+                    <span>防滴劑摻在母料內</span>
+                  </div>
+                  <div class="feature">
+                    <span class="icon">✓</span>
+                    <span>隨著使用過程，防滴劑慢慢滲到膜內表面</span>
+                  </div>
+                  <div class="feature">
+                    <span class="icon">✓</span>
+                    <span>然後為霧滴逐漸沖洗掉</span>
+                  </div>
+                  <div class="feature highlight">
+                    <span class="icon">⭐</span>
+                    <span><strong>防滴效果持續效果可達2年</strong></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quality-item standard">
+                <h4>普通防滴膜</h4>
+                <div class="feature-list">
+                  <div class="feature">
+                    <span class="icon">○</span>
+                    <span>防滴劑塗在表面上</span>
+                  </div>
+                  <div class="feature">
+                    <span class="icon">○</span>
+                    <span>效果較短暫</span>
+                  </div>
+                  <div class="feature">
+                    <span class="icon">○</span>
+                    <span>容易被雨水沖刷</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="guide-item">
-              <div class="guide-number">4</div>
-              <div class="guide-content">
-                <h3>評估經濟效益</h3>
-                <p>綜合考慮成本與效益，選擇性價比最高的產品</p>
+            <div class="warning-box">
+              <div class="warning-icon">⚠️</div>
+              <div class="warning-content">
+                <strong>使用限制</strong>
+                <p>流滴劑在 <strong>-15°C 以下</strong>時，會產生結晶化而失去原有的效果</p>
               </div>
             </div>
           </div>
@@ -211,148 +214,392 @@
   margin: 0;
 }
 
-.intro-text {
-  max-width: 800px;
-  margin: 0 auto var(--spacing-3xl);
-  text-align: center;
-}
-
-.intro-text p {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-relaxed);
-}
-
-.types-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-2xl);
-  margin-bottom: var(--spacing-4xl);
-}
-
-@media (max-width: 1024px) {
-  .types-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.type-card {
+/* 農膜類型區塊 */
+.film-type-section {
   background-color: var(--color-white);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--spacing-3xl);
   overflow: hidden;
-  transition: all var(--transition-base);
 }
 
-.type-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-xl);
-}
-
-.type-header {
+.section-header {
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   color: var(--color-white);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-2xl);
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
 }
 
-.type-icon {
-  font-size: var(--font-size-4xl);
+.header-icon {
+  font-size: var(--font-size-5xl);
 }
 
-.type-header h3 {
-  font-size: var(--font-size-2xl);
+.section-header h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin: 0;
 }
 
-.type-content {
-  padding: var(--spacing-xl);
+.section-content {
+  padding: var(--spacing-2xl);
 }
 
-.type-description {
+/* 段落樣式 */
+.intro-paragraph {
   font-size: var(--font-size-base);
   color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-lg);
   line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-xl);
 }
 
-.type-content h4 {
-  font-size: var(--font-size-lg);
+/* 資訊卡片 */
+.info-card {
+  background-color: #f8f9fa;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+  border-left: 4px solid var(--color-primary);
+}
+
+.info-card h3 {
+  font-size: var(--font-size-xl);
   color: var(--color-primary);
-  margin: var(--spacing-lg) 0 var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-bold);
 }
 
-.type-content ul {
-  padding-left: var(--spacing-xl);
+.info-card p {
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--spacing-md);
 }
 
-.type-content li {
-  margin-bottom: var(--spacing-xs);
+.info-card p:last-child {
+  margin-bottom: 0;
 }
 
-.selection-guide {
-  background: linear-gradient(135deg, var(--color-bg-secondary), var(--color-bg-accent));
-  padding: var(--spacing-3xl);
-  border-radius: var(--radius-xl);
+/* 高亮卡片 */
+.highlight-card {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  margin: var(--spacing-xl) 0;
+  border: 3px solid var(--color-primary);
 }
 
-.selection-guide h2 {
+.highlight-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
   color: var(--color-primary);
   text-align: center;
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-lg);
 }
 
-.guide-grid {
+/* 分類網格 */
+.classification-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
 }
 
 @media (max-width: 768px) {
-  .guide-grid {
+  .classification-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.guide-item {
-  display: flex;
-  gap: var(--spacing-lg);
-  background-color: var(--color-white);
+.classification-item {
+  text-align: center;
   padding: var(--spacing-xl);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
 }
 
-.guide-number {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  color: var(--color-white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.classification-item.low {
+  background-color: #ffebee;
+  border: 3px solid #e57373;
+}
+
+.classification-item.medium {
+  background-color: #fff3e0;
+  border: 3px solid #ffb74d;
+}
+
+.classification-item.high {
+  background-color: #e8f5e9;
+  border: 3px solid #66bb6a;
+}
+
+.classification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.classification-item .percentage {
   font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.classification-item .label {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+/* 比較框 */
+.comparison-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+@media (max-width: 768px) {
+  .comparison-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comparison-item {
+  background-color: #fafafa;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-border);
+}
+
+.comparison-item h4 {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
   font-weight: var(--font-weight-bold);
 }
 
-.guide-content h3 {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-primary);
-  margin-bottom: var(--spacing-xs);
+.comparison-item ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--spacing-md);
 }
 
-.guide-content p {
+.comparison-item li {
+  padding: var(--spacing-sm) 0;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.comparison-item li::before {
+  content: '▪';
+  color: var(--color-primary);
+  margin-right: var(--spacing-sm);
+}
+
+.note-text {
+  color: #d32f2f;
+  font-weight: var(--font-weight-semibold);
+}
+
+.highlight-text {
+  color: #2e7d32;
+  font-weight: var(--font-weight-semibold);
+}
+
+.tip-box {
+  background-color: rgba(33, 150, 243, 0.1);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  border-left: 3px solid #2196f3;
+}
+
+/* 重點框 */
+.key-point-box {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  margin: var(--spacing-xl) 0;
+  border: 3px solid #ff9800;
+}
+
+.key-point-box .icon {
+  font-size: var(--font-size-5xl);
+  flex-shrink: 0;
+}
+
+.key-point-box .content {
+  flex: 1;
+}
+
+.key-point-box .main-text {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+.key-point-box .sub-text {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
   margin: 0;
+}
+
+.benefit {
+  color: #2e7d32;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+.formula-note {
+  background-color: #e8eaf6;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+  font-style: italic;
+  border: 2px dashed #5c6bc0;
+}
+
+/* 品質比較 */
+.quality-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+@media (max-width: 768px) {
+  .quality-comparison {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quality-item {
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 3px solid;
+}
+
+.quality-item.premium {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  border-color: #2e7d32;
+}
+
+.quality-item.standard {
+  background-color: #f5f5f5;
+  border-color: #9e9e9e;
+}
+
+.quality-item h4 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.quality-item.premium h4 {
+  color: #2e7d32;
+}
+
+.quality-item.standard h4 {
+  color: #616161;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-sm);
+}
+
+.feature.highlight {
+  background-color: rgba(255, 235, 59, 0.3);
+  border: 2px solid #fbc02d;
+}
+
+.feature .icon {
+  flex-shrink: 0;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+.quality-item.premium .feature .icon {
+  color: #2e7d32;
+}
+
+.quality-item.standard .feature .icon {
+  color: #9e9e9e;
+}
+
+/* 警告框 */
+.warning-box {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffe5a0 100%);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  margin-top: var(--spacing-xl);
+  border: 3px solid #ff9800;
+}
+
+.warning-icon {
+  font-size: var(--font-size-4xl);
+  flex-shrink: 0;
+}
+
+.warning-content strong {
+  display: block;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.warning-content p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .section-content {
+    padding: var(--spacing-lg);
+  }
+
+  .section-header {
+    padding: var(--spacing-lg);
+  }
+
+  .header-icon {
+    font-size: var(--font-size-4xl);
+  }
+
+  .section-header h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .key-point-box,
+  .warning-box {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 </style>
 
