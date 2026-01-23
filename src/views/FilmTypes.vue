@@ -11,8 +11,10 @@
 
     <section class="content-section section">
       <div class="container">
-        <!-- 高折射農膜 -->
-        <div class="film-type-section scroll-reveal">
+        <div class="content-wrapper">
+          <div class="main-content scroll-reveal">
+            <!-- 高折射農膜 -->
+            <div class="film-type-section scroll-reveal">
           <div class="section-header">
             <div class="header-icon">✨</div>
             <h2>高折射農膜</h2>
@@ -184,6 +186,33 @@
             </div>
           </div>
         </div>
+          </div>
+
+          <aside class="sidebar scroll-reveal">
+          <div class="sidebar-card">
+            <h3>相關主題</h3>
+            <ul class="related-links">
+              <li>
+                <router-link to="/agricultural-film">認識農膜</router-link>
+              </li>
+              <li>
+                <router-link to="/agricultural-film/light-impact">光的影響</router-link>
+              </li>
+              <li>
+                <router-link to="/agricultural-film/precautions">注意事項</router-link>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>需要協助？</h3>
+            <p>如有任何問題，歡迎與我們聯繫</p>
+            <router-link to="/contact" class="btn btn-primary">
+              聯絡我們
+            </router-link>
+          </div>
+        </aside>
+        </div>
       </div>
     </section>
   </div>
@@ -212,6 +241,19 @@
   color: var(--color-white);
   opacity: 0.9;
   margin: 0;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: var(--spacing-3xl);
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* 農膜類型區塊 */
@@ -600,6 +642,86 @@
     flex-direction: column;
     text-align: center;
   }
+}
+
+/* 側邊欄 */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  align-self: start;
+  z-index: 10;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    position: static;
+    align-self: stretch;
+  }
+}
+
+.sidebar-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.sidebar-card h3 {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.sidebar-card p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.related-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.related-links li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.related-links a {
+  display: block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.related-links a:hover {
+  background-color: var(--color-gray-50);
+  color: var(--color-primary);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
 }
 </style>
 

@@ -70,33 +70,35 @@
       ></button>
     </div>
 
-    <!-- 燈箱 -->
-    <transition name="fade">
-      <div v-if="lightboxOpen" class="lightbox" @click="closeLightbox">
-        <button class="lightbox-close" @click="closeLightbox" aria-label="關閉">
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="32" 
-            height="32" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            stroke-width="2" 
-            stroke-linecap="round" 
-            stroke-linejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-        <img 
-          :src="images[lightboxIndex]" 
-          :alt="`產品圖片 ${lightboxIndex + 1}`"
-          class="lightbox-image"
-          @click.stop
-        />
-      </div>
-    </transition>
+    <!-- 燈箱 - 使用 Teleport 渲染到 body 確保全螢幕顯示 -->
+    <Teleport to="body">
+      <transition name="fade">
+        <div v-if="lightboxOpen" class="lightbox" @click="closeLightbox">
+          <button class="lightbox-close" @click="closeLightbox" aria-label="關閉">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="32" 
+              height="32" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <img 
+            :src="images[lightboxIndex]" 
+            :alt="`產品圖片 ${lightboxIndex + 1}`"
+            class="lightbox-image"
+            @click.stop
+          />
+        </div>
+      </transition>
+    </Teleport>
   </div>
 </template>
 
@@ -226,50 +228,6 @@ const closeLightbox = () => {
   border-radius: 6px;
 }
 
-/* 燈箱 */
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: var(--z-modal);
-  padding: var(--spacing-xl);
-}
-
-.lightbox-close {
-  position: absolute;
-  top: var(--spacing-xl);
-  right: var(--spacing-xl);
-  background-color: rgba(255, 255, 255, 0.1);
-  border: none;
-  color: var(--color-white);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all var(--transition-base);
-}
-
-.lightbox-close:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: rotate(90deg);
-}
-
-.lightbox-image {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  border-radius: var(--radius-lg);
-}
-
 @media (max-width: 768px) {
   .carousel-slide {
     height: 300px;
@@ -279,6 +237,58 @@ const closeLightbox = () => {
     width: 40px;
     height: 40px;
   }
+}
+</style>
+
+<style>
+/* 燈箱樣式 - 非 scoped，因為使用 Teleport 渲染到 body */
+.lightbox {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 9999 !important;
+  padding: var(--spacing-xl) !important;
+  margin: 0 !important;
+}
+
+.lightbox-close {
+  position: absolute !important;
+  top: var(--spacing-xl) !important;
+  right: var(--spacing-xl) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: none !important;
+  color: var(--color-white) !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all var(--transition-base) !important;
+  z-index: 10000 !important;
+}
+
+.lightbox-close:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  transform: rotate(90deg) !important;
+}
+
+.lightbox-image {
+  max-width: 95% !important;
+  max-height: 95% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: var(--radius-lg) !important;
 }
 </style>
 

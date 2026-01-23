@@ -11,10 +11,12 @@
 
     <section class="content-section section">
       <div class="container">
-        <!-- 農膜的使用壽命影響因素 -->
-        <div class="main-title scroll-reveal">
-          <h2>農膜的使用壽命及注意事項：</h2>
-        </div>
+        <div class="content-wrapper">
+          <div class="main-content scroll-reveal">
+            <!-- 農膜的使用壽命影響因素 -->
+            <div class="main-title scroll-reveal">
+              <h2>農膜的使用壽命及注意事項：</h2>
+            </div>
 
         <div class="factors-list">
           <!-- 1. 添加劑的使用 -->
@@ -226,12 +228,32 @@
           </div>
         </div>
 
-        <div class="contact-box scroll-reveal">
-          <h3>需要技術支援？</h3>
-          <p>如有任何使用或保養問題，歡迎隨時與我們聯繫</p>
-          <router-link to="/contact" class="btn btn-primary">
-            聯絡我們
-          </router-link>
+          </div>
+
+          <aside class="sidebar scroll-reveal">
+            <div class="sidebar-card">
+              <h3>相關主題</h3>
+              <ul class="related-links">
+                <li>
+                  <router-link to="/agricultural-film">認識農膜</router-link>
+                </li>
+                <li>
+                  <router-link to="/agricultural-film/light-impact">光的影響</router-link>
+                </li>
+                <li>
+                  <router-link to="/agricultural-film/types">農膜種類</router-link>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>需要協助？</h3>
+              <p>如有任何問題，歡迎與我們聯繫</p>
+              <router-link to="/contact" class="btn btn-primary">
+                聯絡我們
+              </router-link>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -261,6 +283,19 @@
   color: var(--color-white);
   opacity: 0.9;
   margin: 0;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: var(--spacing-3xl);
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* 主標題 */
@@ -599,46 +634,84 @@
   box-shadow: var(--shadow-md);
 }
 
-/* 聯絡框 */
-.contact-box {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  color: var(--color-white);
-  padding: var(--spacing-3xl);
-  border-radius: var(--radius-xl);
-  text-align: center;
-  margin-top: var(--spacing-4xl);
+/* 側邊欄 */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  align-self: start;
+  z-index: 10;
 }
 
-.contact-box h3 {
-  font-size: var(--font-size-2xl);
-  color: var(--color-white);
+@media (max-width: 1024px) {
+  .sidebar {
+    position: static;
+    align-self: stretch;
+  }
+}
+
+.sidebar-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.sidebar-card h3 {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
   margin-bottom: var(--spacing-md);
 }
 
-.contact-box p {
-  font-size: var(--font-size-lg);
-  color: var(--color-white);
-  opacity: 0.9;
-  margin-bottom: var(--spacing-xl);
+.sidebar-card p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
 }
 
-.btn {
-  display: inline-block;
-  padding: var(--spacing-md) var(--spacing-2xl);
-  border-radius: var(--radius-lg);
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-lg);
-  transition: all var(--transition-base);
+.related-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.btn-primary {
-  background-color: var(--color-white);
+.related-links li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.related-links a {
+  display: block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.related-links a:hover {
+  background-color: var(--color-gray-50);
   color: var(--color-primary);
 }
 
+.btn {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-xl);
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
 }
 
 /* 響應式設計 */

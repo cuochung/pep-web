@@ -191,37 +191,37 @@ export const PRODUCTS = [
 export const TIMELINE = [
   {
     year: '1996-1999',
-    title: '扯出TUV3750AF',
+    title: '推出TUV3750AF',
     description: '開始生產高品質農膜'
   },
   {
     year: '2000-2003',
-    title: '扯出TUV3755AF',
+    title: '推出TUV3755AF',
     description: '技術升級，品質提升'
   },
   {
     year: '2004-2007',
-    title: '扯出UV2794AD',
+    title: '推出UV2794AD',
     description: '新一代產品問世'
   },
   {
     year: '2008-2011',
-    title: '扯出UV2794ADAS',
+    title: '推出UV2794ADAS',
     description: '持續創新研發'
   },
   {
     year: '2012-2015',
-    title: '扯出UV2798AD 降溫膜',
+    title: '推出UV2798AD 降溫膜',
     description: '推出降溫功能膜'
   },
   {
     year: '2016-2019',
-    title: '扯出UV2892AD 超韌性膜布',
+    title: '推出UV2892AD 超韌性膜布',
     description: '超韌性材質突破'
   },
   {
     year: '2020~',
-    title: '扯出UV2992AD-S 0.2mm 超透膜',
+    title: '推出UV2992AD-S 0.2mm 超透膜',
     description: '最新超透明技術'
   }
 ]

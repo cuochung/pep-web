@@ -202,6 +202,7 @@
   display: grid;
   grid-template-columns: 1fr 350px;
   gap: var(--spacing-3xl);
+  align-items: start;
 }
 
 @media (max-width: 1024px) {
@@ -554,11 +555,14 @@
   position: sticky;
   top: 100px;
   height: fit-content;
+  align-self: start;
+  z-index: 10;
 }
 
 @media (max-width: 1024px) {
   .sidebar {
     position: static;
+    align-self: stretch;
   }
 }
 
