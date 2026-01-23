@@ -76,7 +76,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/pep/'),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

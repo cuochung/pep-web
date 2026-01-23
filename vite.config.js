@@ -4,6 +4,8 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // 設置基礎路徑，用於部署在子目錄
+  base: '/pep/',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -12,7 +14,7 @@ export default defineConfig({
   },
   build: {
     // 輸出目錄
-    outDir: 'dist',
+    outDir: 'pep',
     // 生成 sourcemap
     sourcemap: false,
     // 分塊策略
