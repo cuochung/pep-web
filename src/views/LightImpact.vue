@@ -135,7 +135,7 @@
               </div>
               <div class="spectrum-chart">
                 <img 
-                  src="/images/knowlange/a.jpg" 
+                  :src="`${baseUrl}images/knowlange/a.jpg`" 
                   alt="太陽光譜與植物之成長關係" 
                   class="chart-image"
                 />
@@ -174,6 +174,7 @@
 </template>
 
 <script setup>
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <style scoped>

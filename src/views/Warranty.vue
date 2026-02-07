@@ -14,7 +14,7 @@
       <div class="container">
         <div class="document-wrapper scroll-reveal">
           <img 
-            src="/images/warranty.gif" 
+            :src="`${baseUrl}images/warranty.gif`" 
             alt="老化破損保固書" 
             class="warranty-image"
           />
@@ -151,6 +151,7 @@
 </template>
 
 <script setup>
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <style scoped>

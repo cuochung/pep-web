@@ -4,7 +4,7 @@
       <div class="intro-grid">
         <div class="intro-image scroll-reveal">
           <img 
-            src="/images/factory/plastika-kritis.jpg" 
+            :src="`${baseUrl}images/factory/plastika-kritis.jpg`" 
             alt="Plastika Kritis工廠" 
             class="hover-lift"
           />
@@ -43,6 +43,8 @@
 </template>
 
 <script setup>
+const baseUrl = import.meta.env.BASE_URL
+
 const features = [
   {
     icon: '🏭',

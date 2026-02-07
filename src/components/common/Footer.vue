@@ -55,7 +55,7 @@
               class="social-link"
               aria-label="LINE"
             >
-              <img src="/images/icons/line-icon.png" alt="LINE" />
+              <img :src="`${baseUrl}images/icons/line-icon.png`" alt="LINE" />
             </a>
             <a 
               :href="SOCIAL_LINKS.facebook" 
@@ -64,7 +64,7 @@
               class="social-link"
               aria-label="Facebook"
             >
-              <img src="/images/icons/facebook-icon.png" alt="Facebook" />
+              <img :src="`${baseUrl}images/icons/facebook-icon.png`" alt="Facebook" />
             </a>
           </div>
         </div>
@@ -85,6 +85,8 @@
 <script setup>
 import { computed } from 'vue'
 import { COMPANY_INFO, PRODUCTS, SOCIAL_LINKS } from '../../utils/constants'
+
+const baseUrl = import.meta.env.BASE_URL
 
 const currentYear = computed(() => new Date().getFullYear())
 

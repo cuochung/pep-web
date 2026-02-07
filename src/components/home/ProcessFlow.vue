@@ -15,7 +15,7 @@
           <div class="step-number">{{ step.step }}</div>
           <div class="step-icon">
             <img 
-              :src="`/images/process/step-${step.step}.png`" 
+              :src="`${baseUrl}images/process/step-${step.step}.png`" 
               :alt="step.title"
               class="step-image"
             />
@@ -47,6 +47,8 @@
 
 <script setup>
 import { PROCESS_STEPS } from '../../utils/constants'
+
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <style scoped>

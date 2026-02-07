@@ -57,7 +57,7 @@
                   rel="noopener noreferrer"
                   class="social-link"
                 >
-                  <img src="/images/icons/line-icon.png" alt="LINE" />
+                  <img :src="`${baseUrl}images/icons/line-icon.png`" alt="LINE" />
                   <span>LINE</span>
                 </a>
                 <a 
@@ -66,7 +66,7 @@
                   rel="noopener noreferrer"
                   class="social-link"
                 >
-                  <img src="/images/icons/facebook-icon.png" alt="Facebook" />
+                  <img :src="`${baseUrl}images/icons/facebook-icon.png`" alt="Facebook" />
                   <span>Facebook</span>
                 </a>
               </div>
@@ -81,6 +81,8 @@
 
 <script setup>
 import { COMPANY_INFO, SOCIAL_LINKS } from '../utils/constants'
+
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <style scoped>

@@ -219,7 +219,7 @@
               </div>
               <div class="warning-image-container">
                 <img 
-                  src="/images/knowlange/warning.gif" 
+                  :src="`${baseUrl}images/knowlange/warning.gif`" 
                   alt="環保回收警告" 
                   class="warning-image"
                 />
@@ -261,6 +261,7 @@
 </template>
 
 <script setup>
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <style scoped>

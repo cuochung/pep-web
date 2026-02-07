@@ -4,7 +4,7 @@
       <div class="header-content">
         <!-- Logo -->
         <router-link to="/" class="logo">
-          <img src="/images/logo/pep-logo.gif" alt="PEP利得膜" class="logo-img" />
+          <img :src="`${baseUrl}images/logo/pep-logo.gif`" alt="PEP利得膜" class="logo-img" />
         </router-link>
 
         <!-- 桌面導航 -->
@@ -30,7 +30,7 @@
           rel="noopener noreferrer"
           class="line-btn"
         >
-          <img src="/images/icons/line-icon.svg" alt="LINE" class="line-icon" />
+          <img :src="`${baseUrl}images/icons/line-icon.svg`" alt="LINE" class="line-icon" />
           <span>加入好友</span>
         </a>
       </div>
@@ -43,6 +43,8 @@
 
 <script setup>
 import { ref } from 'vue'
+
+const baseUrl = import.meta.env.BASE_URL
 import Navigation from './Navigation.vue'
 import MobileMenu from './MobileMenu.vue'
 import { useScrollPosition } from '../../composables/useScrollAnimation'
