@@ -53,7 +53,7 @@ const features = [
   },
   {
     icon: '🔬',
-    title: '三層共擠技術',
+    title: '多層共擠技術',
     description: '全球首創三層共擠技術'
   },
   {

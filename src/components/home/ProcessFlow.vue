@@ -6,49 +6,90 @@
       </h2>
 
       <div class="process-flow">
-        <div 
-          v-for="(step, index) in PROCESS_STEPS" 
-          :key="step.step"
-          class="process-step scroll-reveal"
-          :class="`delay-${index * 100}`"
-        >
-          <div class="step-number">{{ step.step }}</div>
-          <div class="step-icon">
-            <img 
-              :src="`${baseUrl}images/process/step-${
-                step.step === 3 ? 4 : step.step === 4 ? 3 : step.step
-              }.png`" 
-              :alt="step.title"
-              class="step-image"
-            />
+        <template v-for="(step, index) in PROCESS_STEPS" :key="step.step">
+          <!-- 第三步驟：多層共擠壓（三層 / 五層 / 七層） -->
+          <div
+            v-if="step.step === 3"
+            class="process-step process-step-3 scroll-reveal"
+            :class="`delay-${index * 100}`"
+          >
+            <div class="step-number">3</div>
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-3-subtitle">三層 / 五層 / 七層共擠技術</p>
+            <div class="step-3-grid">
+              <div
+                v-for="tech in PROCESS_STEP_3_TECHNOLOGIES"
+                :key="tech.title"
+                class="step-3-item"
+              >
+                <div class="step-3-icon">
+                  <img
+                    :src="`${baseUrl}images/process/${tech.image}`"
+                    :alt="tech.title"
+                    class="step-3-image"
+                  />
+                </div>
+                <h4 class="step-3-item-title">{{ tech.title }}</h4>
+              </div>
+            </div>
+            <div class="step-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
           </div>
-          <h3 class="step-title">{{ step.title }}</h3>
-          <p class="step-description">{{ step.description }}</p>
-          
-          <!-- 箭頭 -->
-          <div v-if="index < PROCESS_STEPS.length - 1" class="step-arrow">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="24" 
-              height="24" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              stroke-width="2" 
-              stroke-linecap="round" 
-              stroke-linejoin="round"
-            >
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
+          <!-- 其餘步驟 -->
+          <div
+            v-else
+            class="process-step scroll-reveal"
+            :class="`delay-${index * 100}`"
+          >
+            <div class="step-number">{{ step.step }}</div>
+            <div class="step-icon">
+              <img
+                :src="`${baseUrl}images/process/step-${
+                  step.step === 4 ? 3 : step.step
+                }.png`"
+                :alt="step.title"
+                class="step-image"
+              />
+            </div>
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+            <div v-if="index < PROCESS_STEPS.length - 1" class="step-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
           </div>
-        </div>
+        </template>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { PROCESS_STEPS } from '../../utils/constants'
+import { PROCESS_STEPS, PROCESS_STEP_3_TECHNOLOGIES } from '../../utils/constants'
 
 const baseUrl = import.meta.env.BASE_URL
 </script>
@@ -83,14 +124,110 @@ const baseUrl = import.meta.env.BASE_URL
   transition: all var(--transition-base);
 }
 
+/* 第三步驟：三層 / 五層 / 七層共擠技術 */
+.process-step-3 {
+  max-width: 420px;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.process-step-3 .step-title {
+  margin-bottom: var(--spacing-xs);
+}
+
+.step-3-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--spacing-lg);
+  line-height: 1.4;
+}
+
+.step-3-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.step-3-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow var(--transition-base);
+}
+
+.step-3-item:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 180px;
+}
+
+.step-3-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.step-3-icon {
+  width: 100%;
+  height: 120px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--spacing-sm);
+  background: var(--color-white);
+}
+
+.step-3-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.step-3-item-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
 .process-step:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-xl);
 }
 
+.process-step-3:hover {
+  transform: translateY(-4px);
+}
+
 @media (max-width: 768px) {
   .process-step {
     max-width: 100%;
+  }
+
+  .process-step-3 {
+    padding: var(--spacing-lg);
+  }
+
+  .step-3-grid {
+    grid-template-columns: 1fr;
+    max-width: 200px;
+    gap: var(--spacing-md);
+  }
+
+  .step-3-item:nth-child(3) {
+    max-width: none;
+  }
+
+  .step-3-icon {
+    height: 100px;
   }
 }
 
@@ -154,18 +291,18 @@ const baseUrl = import.meta.env.BASE_URL
   animation: bounce-horizontal 2s ease-in-out infinite;
 }
 
-@media (max-width: 768px) {
-  .step-arrow {
-    display: none;
-  }
-}
-
 @keyframes bounce-horizontal {
   0%, 100% {
     transform: translateY(-50%) translateX(0);
   }
   50% {
     transform: translateY(-50%) translateX(5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .step-arrow {
+    display: none;
   }
 }
 </style>

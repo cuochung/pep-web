@@ -257,7 +257,7 @@ export const PROCESS_STEPS = [
   {
     step: 3,
     title: '多層共擠壓',
-    description: '三層共擠技術',
+    description: '三層 / 五層 / 七層共擠技術',
     icon: 'layers'
   },
   {
@@ -272,6 +272,13 @@ export const PROCESS_STEPS = [
     description: '實際應用場景',
     icon: 'greenhouse'
   }
+]
+
+// 第三步驟：多層共擠壓技術（三層 / 五層 / 七層）
+export const PROCESS_STEP_3_TECHNOLOGIES = [
+  { title: '三層共擠', image: 'step-4.png' },
+  { title: '五層共擠', image: 'step-45.jpg' },
+  { title: '七層共擠', image: 'step-47.jpg' }
 ]
 
 // 導航選單

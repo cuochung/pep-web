@@ -52,23 +52,16 @@
               <h3>社交媒體</h3>
               <div class="social-links">
                 <a 
-                  :href="SOCIAL_LINKS.line" 
+                  href="https://lin.ee/2ez61vY" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  class="social-link"
+                  class="social-link social-link-line-btn"
                 >
-                  <img :src="`${baseUrl}images/icons/line-icon.png`" alt="LINE" />
-                  <span>LINE</span>
+                  <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" />
                 </a>
-                <a 
-                  :href="SOCIAL_LINKS.facebook" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="social-link"
-                >
-                  <img :src="`${baseUrl}images/icons/facebook-icon.png`" alt="Facebook" />
-                  <span>Facebook</span>
-                </a>
+                <span class="social-link social-link-qr" aria-label="LINE QR Code">
+                  <img :src="`${baseUrl}images/line_qr.jpg`" alt="LINE QR Code" />
+                </span>
               </div>
             </div>
           </div>
@@ -202,6 +195,35 @@ const baseUrl = import.meta.env.BASE_URL
   width: 72px;
   height: 72px;
   object-fit: contain;
+}
+
+.social-link-line-btn {
+  padding: 0;
+  background: transparent;
+}
+
+.social-link-line-btn:hover {
+  background: transparent;
+}
+
+.social-link-line-btn img {
+  height: 36px;
+  width: auto;
+  border-radius: var(--radius-lg);
+}
+
+.social-link-qr {
+  cursor: default;
+}
+
+.social-link-qr:hover {
+  transform: none;
+  background-color: var(--color-gray-50);
+}
+
+.social-link-qr img {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
 }
 </style>
 
