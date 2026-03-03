@@ -13,7 +13,7 @@
       <div class="container">
         <div class="products-grid">
           <div 
-            v-for="product in PRODUCTS" 
+            v-for="product in productsWithLocalImages" 
             :key="product.id"
             class="scroll-reveal"
           >
@@ -26,8 +26,52 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import ProductCard from '../components/products/ProductCard.vue'
 import { PRODUCTS } from '../utils/constants'
+
+const BASE = import.meta.env.BASE_URL
+
+const IMAGES_OTHER = [
+  `${BASE}images/products/other/S__49758227.jpg`,
+  `${BASE}images/products/other/S__49758228.jpg`,
+  `${BASE}images/products/other/S__49758229.jpg`,
+  `${BASE}images/products/other/S__49758230.jpg`,
+  `${BASE}images/products/other/S__49758231.jpg`,
+  `${BASE}images/products/other/S__49758232.jpg`
+]
+
+const IMAGES_NW = [
+  `${BASE}images/products/nw/nw1.png`,
+  `${BASE}images/products/nw/nw2.png`,
+  `${BASE}images/products/nw/nw3.png`,
+  `${BASE}images/products/nw/nw4.png`,
+  `${BASE}images/products/nw/nw5.png`
+]
+
+function shuffleArray (arr) {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+function pickRandom (arr) {
+  return arr[Math.floor(Math.random() * arr.length)]
+}
+
+// 前三張用 other 且不重複，第四張用 nw 亂數
+const shuffledOther = shuffleArray(IMAGES_OTHER)
+const productsWithLocalImages = ref(
+  PRODUCTS.map((p, index) => {
+    const image = p.id === 'product-waterproof'
+      ? pickRandom(IMAGES_NW)
+      : shuffledOther[index % shuffledOther.length]
+    return { ...p, image }
+  })
+)
 </script>
 
 <style scoped>

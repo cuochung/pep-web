@@ -100,7 +100,7 @@
         <h2 class="section-title text-center scroll-reveal">其他產品</h2>
         <div class="products-grid">
           <div 
-            v-for="relatedProduct in relatedProducts" 
+            v-for="relatedProduct in relatedProductsWithImages" 
             :key="relatedProduct.id"
             class="scroll-reveal"
           >
@@ -123,7 +123,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import ProductCarousel from '../components/products/ProductCarousel.vue'
 import ProductGallery from '../components/products/ProductGallery.vue'
@@ -132,32 +132,91 @@ import { PRODUCTS } from '../utils/constants'
 
 const route = useRoute()
 
+// 產品詳情頁使用的本地圖片（public 目錄，依 base 路徑解析）
+const BASE = import.meta.env.BASE_URL
+
+// 一般產品使用的示意圖
+const LOCAL_PRODUCT_IMAGES_DEFAULT = [
+  `${BASE}images/products/other/S__49758227.jpg`,
+  `${BASE}images/products/other/S__49758228.jpg`,
+  `${BASE}images/products/other/S__49758229.jpg`,
+  `${BASE}images/products/other/S__49758230.jpg`,
+  `${BASE}images/products/other/S__49758231.jpg`,
+  `${BASE}images/products/other/S__49758232.jpg`
+]
+
+// 軟質不透水布專用示意圖
+const LOCAL_PRODUCT_IMAGES_WATERPROOF = [
+  `${BASE}images/products/nw/nw1.png`,
+  `${BASE}images/products/nw/nw2.png`,
+  `${BASE}images/products/nw/nw3.png`,
+  `${BASE}images/products/nw/nw4.png`,
+  `${BASE}images/products/nw/nw5.png`
+]
+
+function getLocalImagesForProduct (p) {
+  if (!p) return []
+  if (p.id === 'product-waterproof') {
+    return LOCAL_PRODUCT_IMAGES_WATERPROOF
+  }
+  return LOCAL_PRODUCT_IMAGES_DEFAULT
+}
+
+function shuffleArray (arr) {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+const shuffledImages = ref([])
 const product = computed(() => {
   return PRODUCTS.find(p => p.slug === route.params.slug)
 })
 
+// 只保留有效圖片 URL，避免輪播出現空位或無效索引
+function getValidImages (urls) {
+  if (!Array.isArray(urls)) return []
+  return urls.filter(url => url != null && String(url).trim() !== '')
+}
+
+watch(
+  () => product.value,
+  (p) => {
+    if (!p) {
+      shuffledImages.value = []
+      return
+    }
+
+    const images = getValidImages(getLocalImagesForProduct(p))
+    shuffledImages.value = images.length ? shuffleArray(images) : []
+  },
+  { immediate: true }
+)
+
 const productImages = computed(() => {
   if (!product.value) return []
-  return [
-    product.value.image,
-    `/images/products/${product.value.id}-2.jpg`,
-    `/images/products/${product.value.id}-3.jpg`
-  ]
+  return shuffledImages.value
 })
 
 const galleryImages = computed(() => {
   if (!product.value) return []
-  return [
-    `/images/products/${product.value.id}-gallery-1.jpg`,
-    `/images/products/${product.value.id}-gallery-2.jpg`,
-    `/images/products/${product.value.id}-gallery-3.jpg`,
-    `/images/products/${product.value.id}-gallery-4.jpg`
-  ]
+  return shuffledImages.value
 })
 
-const relatedProducts = computed(() => {
+const relatedProductsWithImages = computed(() => {
   if (!product.value) return []
-  return PRODUCTS.filter(p => p.id !== product.value.id).slice(0, 3)
+
+  return PRODUCTS
+    .filter(p => p.id !== product.value.id)
+    .slice(0, 3)
+    .map((p, index) => {
+      const set = getValidImages(getLocalImagesForProduct(p))
+      const image = set.length ? set[index % set.length] : p.image
+      return { ...p, image }
+    })
 })
 </script>
 

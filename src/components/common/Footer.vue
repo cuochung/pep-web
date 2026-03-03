@@ -46,26 +46,16 @@
         <!-- 社交媒體 -->
         <div class="footer-section">
           <h3 class="footer-title">關注我們</h3>
+
+          
           
           <div class="social-links">
-            <a 
-              :href="SOCIAL_LINKS.line" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="social-link"
-              aria-label="LINE"
-            >
-              <img :src="`${baseUrl}images/icons/line-icon.png`" alt="LINE" />
+            <a href="https://lin.ee/2ez61vY" class="social-link social-link-line-btn" target="_blank" rel="noopener noreferrer">
+              <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" />
             </a>
-            <a 
-              :href="SOCIAL_LINKS.facebook" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="social-link"
-              aria-label="Facebook"
-            >
-              <img :src="`${baseUrl}images/icons/facebook-icon.png`" alt="Facebook" />
-            </a>
+            <span class="social-link social-link-qr" aria-label="LINE QR Code">
+              <img :src="`${baseUrl}images/line_qr.jpg`" alt="LINE QR Code" />
+            </span>
           </div>
         </div>
       </div>
@@ -163,6 +153,7 @@ const quickLinks = [
 
 .social-links {
   display: flex;
+  align-items: stretch;
   gap: var(--spacing-md);
 }
 
@@ -170,11 +161,29 @@ const quickLinks = [
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  height: 62px;
+  min-width: 48px;
   background-color: var(--color-gray-800);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
   transition: all var(--transition-base);
+}
+
+.social-link-line-btn {
+  width: auto;
+  padding: 0;
+  height: 36px;
+  line-height: 0;
+}
+
+.social-link-line-btn img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.social-link-qr {
+  width: 62px;
 }
 
 .social-link:hover {
@@ -187,7 +196,18 @@ const quickLinks = [
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: var(--radius-md);
   transition: all var(--transition-base);
+}
+
+.social-link-line-btn img {
+  border-radius: var(--radius-md);
+}
+
+.social-link-qr img {
+  object-fit: contain;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
 }
 
 .footer-bottom {

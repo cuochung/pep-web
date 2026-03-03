@@ -15,7 +15,9 @@
           <div class="step-number">{{ step.step }}</div>
           <div class="step-icon">
             <img 
-              :src="`${baseUrl}images/process/step-${step.step}.png`" 
+              :src="`${baseUrl}images/process/step-${
+                step.step === 3 ? 4 : step.step === 4 ? 3 : step.step
+              }.png`" 
               :alt="step.title"
               class="step-image"
             />

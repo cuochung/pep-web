@@ -21,6 +21,17 @@
             <p class="timeline-description">{{ item.description }}</p>
           </div>
           <div class="timeline-marker"></div>
+
+          <div 
+            v-if="item.image" 
+            class="timeline-image scroll-reveal"
+            :class="[
+              index % 2 === 0 ? 'timeline-image-right' : 'timeline-image-left',
+              item.imageContain ? 'timeline-image-contain' : ''
+            ]"
+          >
+            <img :src="`${baseUrl}${item.image}`" :alt="item.title" />
+          </div>
         </div>
       </div>
     </div>
@@ -29,6 +40,8 @@
 
 <script setup>
 import { TIMELINE } from '../../utils/constants'
+
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <style scoped>
@@ -76,6 +89,7 @@ import { TIMELINE } from '../../utils/constants'
 .timeline-item {
   position: relative;
   margin-bottom: var(--spacing-3xl);
+   padding-bottom: 180px;
   display: flex;
   align-items: center;
 }
@@ -99,10 +113,27 @@ import { TIMELINE } from '../../utils/constants'
   }
 }
 
+@media (max-width: 768px) {
+  .timeline {
+    max-width: 100%;
+    padding: var(--spacing-xl) 0;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
+
+  .timeline-content {
+    max-width: 100%;
+  }
+}
+
 .timeline-content {
   background-color: var(--color-white);
   padding: var(--spacing-xl);
-  border-radius: var(--radius-lg);
+  border-radius: 24px;
   box-shadow: var(--shadow-md);
   max-width: 400px;
   transition: all var(--transition-base);
@@ -153,6 +184,93 @@ import { TIMELINE } from '../../utils/constants'
 @media (max-width: 768px) {
   .timeline-marker {
     left: 30px;
+  }
+}
+
+.timeline-image {
+  position: absolute;
+  top: 0;
+  transform: none;
+  width: min(360px, 32vw);
+  max-width: 360px;
+  height: 260px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.timeline-image-right {
+  right: 8%;
+}
+
+.timeline-image-left {
+  left: 8%;
+}
+
+.timeline-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-image-contain {
+  height: auto;
+  overflow: hidden;
+}
+
+.timeline-image-contain img {
+  object-fit: contain;
+}
+
+.timeline-image.scroll-reveal {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.timeline-image-left.scroll-reveal {
+  transform: translateX(-30px);
+}
+
+.timeline-image.revealed {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all var(--transition-base);
+}
+
+@media (max-width: 768px) {
+  .timeline-image {
+    position: static;
+    transform: none;
+    margin-top: var(--spacing-lg);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 220px;
+  }
+
+  .timeline-image img {
+    height: auto;
+  }
+
+  .timeline-image:not(.timeline-image-contain) img {
+    max-height: 220px;
+  }
+
+  .timeline-image-contain {
+    max-height: none;
+  }
+
+  .timeline-image-contain img {
+    max-height: none;
+  }
+
+  .timeline-image.scroll-reveal {
+    transform: translateX(-30px);
+  }
+
+  .timeline-image.revealed {
+    transform: translateX(0);
   }
 }
 

@@ -4,7 +4,7 @@
       <div class="container">
         <h1 class="page-title scroll-reveal">產品保固書</h1>
         <p class="page-subtitle scroll-reveal">
-          PEP利得膜®提供完整的產品保固服務，確保您的權益
+          依據「PEP利得膜®老化破損保固書」，說明各型號農膜的保固期限與適用條款
         </p>
       </div>
     </section>
@@ -14,7 +14,7 @@
       <div class="container">
         <div class="document-wrapper scroll-reveal">
           <img 
-            :src="`${baseUrl}images/warranty.gif`" 
+            :src="`${baseUrl}images/warranty.jpg`" 
             alt="老化破損保固書" 
             class="warranty-image"
           />
@@ -38,15 +38,15 @@
             </thead>
             <tbody>
               <tr>
-                <td>UV 2892 AD-S / 0.10mm</td>
+                <td>UV2892 AD-S / 0.10mm</td>
                 <td class="period-highlight">24 個月</td>
-                <td>UV 2992 AD-S / 0.20mm</td>
+                <td>UV2992 AD-S / 0.20mm</td>
                 <td class="period-highlight">48 個月</td>
               </tr>
               <tr>
-                <td>UV 2892 AD-S / 0.15mm</td>
+                <td>UV2892 AD-S / 0.15mm</td>
                 <td class="period-highlight">36 個月</td>
-                <td>微氣泡膜 / 0.18mm</td>
+                <td>POP 相變膜 / 0.18mm</td>
                 <td class="period-highlight">48 個月</td>
               </tr>
             </tbody>
@@ -186,16 +186,19 @@ const baseUrl = import.meta.env.BASE_URL
   max-width: 900px;
   margin: 0 auto;
   background-color: var(--color-white);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg);
   border-radius: var(--radius-xl);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
 .warranty-image {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
+  object-fit: contain;
+  vertical-align: top;
 }
 
 /* 保固期表格 */

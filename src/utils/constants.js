@@ -192,37 +192,51 @@ export const TIMELINE = [
   {
     year: '1996-1999',
     title: '推出TUV3750AF',
-    description: '開始生產高品質農膜'
+    description: '開始生產高品質農膜',
+    image: 'images/improvement/3750.jpg'
   },
   {
     year: '2000-2003',
     title: '推出TUV3755AF',
-    description: '技術升級，品質提升'
+    description: '技術升級，品質提升',
+    image: 'images/improvement/3755.png'
   },
   {
     year: '2004-2007',
     title: '推出UV2794AD',
-    description: '新一代產品問世'
+    description: '新一代產品問世',
+    image: 'images/improvement/2794AD.jpg'
   },
   {
     year: '2008-2011',
     title: '推出UV2794ADAS',
-    description: '持續創新研發'
+    description: '持續創新研發',
+    image: 'images/improvement/2794ADAS.jpg'
   },
   {
     year: '2012-2015',
     title: '推出UV2798AD 降溫膜',
-    description: '推出降溫功能膜'
+    description: '推出降溫功能膜',
+    image: 'images/improvement/2798AD.jpg'
   },
   {
     year: '2016-2019',
     title: '推出UV2892AD 超韌性膜布',
-    description: '超韌性材質突破'
+    description: '超韌性材質突破',
+    image: 'images/improvement/2892AD.jpg'
   },
   {
-    year: '2020~',
+    year: '2020-2025',
     title: '推出UV2992AD-S 0.2mm 超透膜',
-    description: '最新超透明技術'
+    description: '最新超透明技術',
+    image: 'images/improvement/2992AD.jpg'
+  },
+  {
+    year: '2026~',
+    title: '推出POP 智能相變膜',
+    description: '一膜雙效 冬暖夏涼',
+    image: 'images/improvement/194069.jpg',
+    imageContain: true
   }
 ]
 

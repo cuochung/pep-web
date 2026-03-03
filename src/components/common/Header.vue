@@ -25,13 +25,12 @@
 
         <!-- LINE 按鈕 -->
         <a 
-          href="https://line.me/ti/p/@super-pep" 
+          href="https://lin.ee/2ez61vY" 
           target="_blank" 
           rel="noopener noreferrer"
           class="line-btn"
         >
-          <img :src="`${baseUrl}images/icons/line-icon.svg`" alt="LINE" class="line-icon" />
-          <span>加入好友</span>
+          <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" />
         </a>
       </div>
     </div>
@@ -148,41 +147,33 @@ const closeMobileMenu = () => {
 }
 
 .line-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-md);
-  background-color: #06C755;
-  color: white;
+  justify-content: center;
+  padding: 0;
+  height: 36px;
+  line-height: 0;
+  background: transparent;
   border-radius: var(--radius-lg);
-  font-weight: var(--font-weight-medium);
-  transition: all var(--transition-base);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.line-btn:focus {
+  outline: none;
+}
+
+.line-btn img {
+  height: 36px;
+  width: auto;
+  display: block;
+  border-radius: var(--radius-lg);
 }
 
 .line-btn:hover {
-  background-color: #05b04b;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.line-btn .line-icon {
-  width: 32px;
-  height: 32px;
-  display: block;
-  flex-shrink: 0;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-}
-
-@media (max-width: 768px) {
-  .line-btn {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    font-size: var(--font-size-sm);
-  }
-  
-  .line-btn span {
-    display: none;
-  }
+  background: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 </style>
 

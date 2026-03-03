@@ -6,7 +6,7 @@
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
       >
         <div 
-          v-for="(image, index) in images" 
+          v-for="(image, index) in validImages" 
           :key="index"
           class="carousel-slide"
         >
@@ -17,7 +17,7 @@
 
     <!-- 導航按鈕 -->
     <button 
-      v-if="images.length > 1"
+      v-if="validImages.length > 1"
       class="carousel-btn carousel-btn-prev" 
       @click="prev"
       aria-label="上一張"
@@ -38,7 +38,7 @@
     </button>
     
     <button 
-      v-if="images.length > 1"
+      v-if="validImages.length > 1"
       class="carousel-btn carousel-btn-next" 
       @click="next"
       aria-label="下一張"
@@ -59,9 +59,9 @@
     </button>
 
     <!-- 指示器 -->
-    <div v-if="images.length > 1" class="carousel-indicators">
+    <div v-if="validImages.length > 1" class="carousel-indicators">
       <button
-        v-for="(image, index) in images"
+        v-for="(image, index) in validImages"
         :key="index"
         class="indicator"
         :class="{ 'active': index === currentIndex }"
@@ -91,7 +91,7 @@
             </svg>
           </button>
           <img 
-            :src="images[lightboxIndex]" 
+            :src="validImages[lightboxIndex]" 
             :alt="`產品圖片 ${lightboxIndex + 1}`"
             class="lightbox-image"
             @click.stop
@@ -103,7 +103,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, watch } from 'vue'
 
 const props = defineProps({
   images: {
@@ -112,16 +112,38 @@ const props = defineProps({
   }
 })
 
+// 只使用有效圖片，確保總數量正確、不讀到空位
+const validImages = computed(() => {
+  if (!Array.isArray(props.images)) return []
+  return props.images.filter(src => src != null && String(src).trim() !== '')
+})
+
 const currentIndex = ref(0)
 const lightboxOpen = ref(false)
 const lightboxIndex = ref(0)
 
+// 圖片數量變更時（例如切換到 product-waterproof），確保索引不超出範圍
+watch(validImages, (list) => {
+  const len = list.length
+  if (len === 0) {
+    currentIndex.value = 0
+    return
+  }
+  if (currentIndex.value >= len) {
+    currentIndex.value = len - 1
+  }
+}, { immediate: true })
+
 const next = () => {
-  currentIndex.value = (currentIndex.value + 1) % props.images.length
+  const len = validImages.value.length
+  if (!len) return
+  currentIndex.value = (currentIndex.value + 1) % len
 }
 
 const prev = () => {
-  currentIndex.value = (currentIndex.value - 1 + props.images.length) % props.images.length
+  const len = validImages.value.length
+  if (!len) return
+  currentIndex.value = (currentIndex.value - 1 + len) % len
 }
 
 const goTo = (index) => {
