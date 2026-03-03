@@ -14,8 +14,6 @@
             :class="`delay-${index * 100}`"
           >
             <div class="step-number">3</div>
-            <h3 class="step-title">{{ step.title }}</h3>
-            <p class="step-3-subtitle">三層 / 五層 / 七層共擠技術</p>
             <div class="step-3-grid">
               <div
                 v-for="tech in PROCESS_STEP_3_TECHNOLOGIES"
@@ -32,6 +30,8 @@
                 <h4 class="step-3-item-title">{{ tech.title }}</h4>
               </div>
             </div>
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-3-subtitle">三層 / 五層 / 七層共擠技術</p>
             <div class="step-arrow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -133,13 +133,14 @@ const baseUrl = import.meta.env.BASE_URL
 }
 
 .process-step-3 .step-title {
+  margin-top: var(--spacing-lg);
   margin-bottom: var(--spacing-xs);
 }
 
 .step-3-subtitle {
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
-  margin: 0 0 var(--spacing-lg);
+  margin: 0;
   line-height: 1.4;
 }
 
