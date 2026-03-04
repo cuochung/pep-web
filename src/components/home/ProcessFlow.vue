@@ -97,6 +97,7 @@ const baseUrl = import.meta.env.BASE_URL
 <style scoped>
 .process-section {
   background: linear-gradient(135deg, var(--color-bg-secondary), var(--color-bg-accent));
+  padding-bottom: var(--spacing-4xl);
 }
 
 .process-flow {

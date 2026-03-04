@@ -94,7 +94,7 @@ const quickLinks = [
   background-color: var(--color-gray-900);
   color: var(--color-gray-300);
   padding: var(--spacing-3xl) 0 var(--spacing-xl);
-  margin-top: var(--spacing-4xl);
+  margin-top: 0;
 }
 
 .footer-content {
